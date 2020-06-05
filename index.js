@@ -1,4 +1,4 @@
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer-core');
 var args = process.argv
 const chromeOptions = {
     executablePath:'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe',
@@ -35,10 +35,10 @@ const acessar = async() =>{
     await page.click('.HKarue')
     await page.waitForSelector('.oJeWuf', { visible: true })
     await page.click('.oJeWuf')
-    await page.type('.oJeWuf', 'ok' , {delay:1440000})
+    await page.type('.oJeWuf', args[6], {delay:2898000})
     await page.keyboard.press('Enter');
     await page.click('.oJeWuf')
-    await page.type('.oJeWuf', args[5,6,7] , {delay:1000})
+    await page.type('.oJeWuf', args[5] , {delay:1000})
     await page.keyboard.press('Enter');
 
 
